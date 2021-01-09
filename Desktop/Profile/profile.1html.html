@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>profile</title>
+<h5 id="home"> </h5>
+</head>
+<link rel="stylesheet" type="text/css" href="profile.css">
+<body id="body">
+<!--<div id="test"> This is testing </div>-->
+<!--<h1 id="h1"> Welcome to my page!!! </h1> -->
+<!--<h1 id="greeting"> </h1> -->
+<nav id="nav">
+	<li> <a href="#">Home</a> </li>
+	<li> <a href="#images">Projects</a> </li>
+	<li> <a href="#fr">Frameworks</a> </li>
+	<li id="push"> <a href="#footer">Contact</a> </li>
+</nav>
+<h2 id="h2">Hey, I am Jonas!! </h2>
+<img id = "profilepix" src="C:\Users\ODOGU\Desktop\Catholic web\Jojoe.jpg">
+<div id="profile"> I am a passionate software developer and chartered accountant. I have over six years of work experience with technical background in finance, accounting and taxation among others. I am eager to learn new things . <p> </p><span id="more" className="readlesstext"> <p> I work at Electronic Payplus Limited, a payment solution company as assistant manager, finance and accounts having worked as Head, finance and accounts at Westgate Lifecare Limited, a foremost retailer of fast moving consumable goods in Lagos, Nigeria. <p> I have also worked at Rehoboth Professional Services, a firm of chartered accountants as an audit manager after a stint at Deinde Odusanya & Co another firm of chartered accountants as audit and tax senior. These role entail services in financial reporting, accounting and tax advisory to clients with a view to improving their processes thereby saving costs.</p> <p> I have leadership experience having led four member audit team on several audit engagements, four member staff in Finance and accounts department at Westgate Lifecare and currently have staff under my purview. <p>I enthusiastically look forward to hearing from you soon.</p> Thank you for your time.  
+
+<!--
+<br> Sincerely, 
+<p> Odogwu, Jonas  </p>
+-->
+</span>
+
+
+</div>
+
+<button id="btn"> Read more!! </button>
+<button id="btn1">Read less!!</button>
+<br> <br>
+
+<div id=image>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\Catholic web\Calculator.jpg">
+<p id="textinfo"> This is a calculator </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\Catholic web\Todo.jpg">
+<p id="textinfo"> This is a simple To-do list </p>
+</div>
+
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\Catholic web\seamgo.jpg">
+<p id="textinfo"> This is a website for logistics company </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\Catholic web\login.jpg">
+<p id="textinfo"> This is a Login validation project </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\Catholic web\Todo.jpg">
+<p id="textinfo"> This is a simple To-do list </p>
+</div>
+
+
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\Catholic web\deb.jpg">
+<p id="textinfo"> This is a simple website for a boutique </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\Catholic web\login.jpg">
+<p id="textinfo"> This is a Login validation project </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\Catholic web\deb1.jpg">
+<p id="textinfo"> This is a simple website for a boutique </p>
+</div>
+</div>
+<br><br>
+<div id = "frameworks">
+	<img id = "fr" src="C:\Users\ODOGU\Desktop\Catholic web\html.jpg">
+	<img id = "fr" src="C:\Users\ODOGU\Desktop\Catholic web\css.jpg">
+	<img id = "fr" src="C:\Users\ODOGU\Desktop\Catholic web\js.jpg">
+	<img id = "fr" src="C:\Users\ODOGU\Desktop\Catholic web\cs.jpg">
+	<img id = "fr" src="C:\Users\ODOGU\Desktop\Catholic web\mvc.jpg">
+	<img id = "fr" src="C:\Users\ODOGU\Desktop\Catholic web\asp.jpg">
+
+ </div>
+
+<style>
+body{
+background: rgb(60, 40, 80);
+padding: 0px;
+margin-top: 0px;
+border-top: 0px;
+
+}
+
+#profilepix 
+{
+	width: 100px;
+	height:100px;
+	float: left;
+
+
+	
+}
+
+#frameworks
+{
+	
+}
+
+
+
+#profile{
+text-align: justify;
+color: gold;
+font-size: 20px;
+text-align: justify;
+text-justify: inter-word;
+line-height: 20px;
+}
+
+#push{
+margin-left: auto;
+}
+
+#textinfo{
+	color:gold;
+	text-align: center;
+	font-size: 20px;
+
+}
+
+/*
+p{
+	color: white;
+	text-align: center;
+	font-size: 20px;
+}
+*/
+#nav{
+display: flex;
+color: green;
+padding: 8px;
+background: teal;
+box-shadow: 3px 3px ;
+margin-top: -22px;
+/*
+border: green solid 5px;
+border-radius: 10px; */
+}
+
+li,a {
+	padding-left: 10px;
+	text-decoration: none;
+	list-style: none;
+	font-size: 20px;
+	color:white;
+}
+
+
+ .contact {
+	margin-left: auto;
+}
+
+#btn , #btn1{
+	color: linen;
+	font-size: 20px;
+	background: dodgerblue;
+	cursor: pointer;
+}
+
+#image {
+display: flex;
+flex-wrap: wrap;
+transition: all;
+cursor: pointer;
+/*align-items: center;*/
+
+
+}
+/*
+#image{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+	}
+*/
+
+#images{
+	height: 305px;
+	padding: 10px;
+	width: 300px;
+	margin-top: 20px;
+	grid-row: all;	
+}
+
+img {
+	transition: all 1s ease;
+}
+
+img:hover{
+
+
+	transform:scale(1.05);
+}
+
+#footer {
+	position: relative;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	line-height: 10px;
+	/*background: dodgerblue;*/
+	padding: 4px;
+	
+	/*border: green solid 5px;
+	border-radius: 10px;
+*/
+
+
+}
+
+#fr
+{
+	
+	display: inline-table;
+	height: 60px;
+	padding: 10px;
+	
+}
+
+#homy{
+	color: white;
+	font-size: 20px;
+	text-align: right;
+	line-height: 20px;
+	
+	
+	
+}
+#homy2{
+	color: white;
+	font-size: 20px;
+	text-align: right;
+	line-height: 20px;
+
+	
+	
+}
+
+
+
+
+
+#h1{
+	color: skyblue;
+	border: green;
+	font-size: 25px;
+}
+
+
+
+
+
+h2{
+	color: white;
+	font-size: 25px;
+	text-align: center;
+
+}
+
+#more{
+	display: none;
+}
+
+#socialmedia
+{
+	height: 25px;
+	align-items: center;
+
+	
+}
+
+</style>
+
+<script>
+let body = document.getElementById("body");
+let profile = document.getElementById("profile");
+let btn = document.getElementById("btn");
+let btn1 = document.getElementById("btn1");
+let projects = document.getElementById("projects");
+let list = document.getElementById("listItem");
+let image = document.getElementById("image");
+let contact = document.getElementById("contact");
+let footer = document.getElementById("footer");
+let more = document.getElementById("more");
+let readlesstext = document.getElementsByClassName("readlesstext");
+let test = document.getElementById("test");
+time = 3000;
+document.addEventListener("DOMContentLoaded", function(){
+btn1.style.display ="none";
+btn1.innerHTML = "";
+})
+
+
+
+btn.addEventListener("click", function(){
+more.style.display = "inline";
+btn.style.display = "none";
+btn.innerHTML= "";
+btn1.style.display ="block";
+btn1.innerHTML = "Read less!!";
+
+
+btn1.onclick = () => {
+more.style.display = "none";
+btn1.style.display ="none";
+btn1.innerHTML ="";
+btn.style.display ="block";
+btn.innerHTML = "Read more!!"
+
+
+}
+
+
+//setTimeout(function(){
+//body.style.background="linear-gradient(to right, blue, black)";
+//});
+});
+
+
+//var today = new Date()
+//hour = today.getHours();
+//min = today.getMinutes();
+//sec = today.getSeconds();
+//timeNow =(`${hour}:${min}:${sec}`);
+
+var today = new Date()
+hour = today.getHours();
+let timeOfDay
+if(hour >= 12 && hour <= 17){
+	timeOfDay = "afternoon";
+ }
+ else if (hour >= 17) {
+ 	timeOfDay = "evening";
+ }
+
+ else if(hour >= 0 && hour < 12) {
+ 	timeOfDay = "morning";
+}
+
+greeting.innerHTML=`Good ${timeOfDay}!`
+
+setTimeout(function(){
+greeting.style.color="green"
+}, 8000)
+
+
+
+ </script>
+ <br><br>
+ <footer id="footer">
+ 				<img id = "socialmedia" src="C:\Users\ODOGU\Desktop\Catholic web\image16_ca.jpg">+2347032626688
+ 				 				Lagos, Nigeria
+ 					<img id = "socialmedia" src="C:\Users\ODOGU\Desktop\Catholic web\image14_ma.jpg"> Jojoe_dev@gmail.com
+ 					 <img id = "socialmedia" src="C:\Users\ODOGU\Desktop\Catholic web\image11_tw.jpg"> @Jojoe_dev
+ 					 
+ 				</footer>
+ 	<br>
+ <!--<li> <a id="homy" href="#home"> Move to the top</a> </li>	-->
+ <li> <a id="homy2" href="#home"> Move to the top</a> </li>				
+<!--<hr> -->
+</body>
+</html>

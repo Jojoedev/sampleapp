@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+var n = 2020;	
+var Person = function(Name, yearOfBirth, job) {
+	this.Name = Name;
+	this.yearOfBirth = yearOfBirth;
+	this.job = job;
+	//this is a method
+	//this.calculateAge = function(){
+	//	console.log(2020-this.yearOfBirth);
+	//}
+	}
+
+		//this is prototype inheritance
+		Person.prototype.calculateAge = function(){
+		console.log(n - this.yearOfBirth);
+		};
+//this is instantiation
+var nkem = new Person("Nkem", 1995, "Accountant");
+var jojoe = new Person("Jonas", 1986, "Developer");
+nkem.calculateAge();
+jojoe.calculateAge();
+*/
+
+//Call back function
+var years = [1990, 1986, 1995, 1999, 2010];
+
+var newArray = [];
+
+//fn represents a callback function which is calAge function. It is passed as input or argument into arrayCal function. years is passed as argument but it can be anything actally. eg arr,ver
+function arrayCal(arr, fn) {
+for(var i =0; i < arr.length; i++) {
+	newArray.push(fn(arr[i]));
+	console.log(arr);
+}
+return newArray;
+}
+
+function calAge(n) {
+	return 2020 - n;
+}
+ 
+
+var ages = arrayCal(years, calAge);
+
+console.log(ages);
+
+
+
+var Army = function(name, age, dept){
+	this.name = name;
+	this.age =  age;
+	this.dept = dept;
+	}
+
+	Army.prototype.checks =function() {
+		console.log(`My name is ${this.name}, ${this.age} years and works in ${this.dept}`);
+	}
+
+	var soldier1 = new Army("John", 34, "Artillary");
+	var soldier2 = new Army("Musa", 42, "Ground troop")
+	var soldier3 = new Army("Abu Alih", 44, "Garrison");
+
+	soldier1.checks();
+	soldier2.checks();
+	soldier3.checks();
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

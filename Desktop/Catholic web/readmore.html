@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Read more</title>
+</head>
+<body id="body">
+<h1> Welcome to my page!!! </h1>	
+<h1> My Profile </h1>
+
+
+<div id="info"> I am writing to express my interest in securing a senior finance analyst position at Paystack. I am a chartered accountant and Oxford Brookes University as well as ACCA student.I come from a solid technical background of over five work experience with a strong interest in finance and accounting and a passion towards strategy. My area of focus and interest varies from finance and accounting, taxation among others.
+<span id="more">  <p> I am also into software development having being learning HTML, CSS and Javascript. I intend to learn more of IT courses in the area of software development. 
+I am extremely impressed with Paystack’s approach to strategy payment solution, especially within the Business Development and Innovation practice areas. </p> I believe my academic background, business knowledge and industry experiences have provided me with the credentials needed to thrive as a senior finance analyst. I work at Electronic Payplus Limited, a payment solution company as assistant manager, finance and accounts having worked as Head, finance and accounts at Westgate Lifecare Limited, a foremost retailer of fast moving consumable goods. <p> I also left Rehoboth Professional Services, a firm of chartered accountants as an audit manager after a stint at Deinde Odusanya & Co another firm of chartered accountants where I worked as audit and tax senior. The roles that involves technical financial, accounting and tax advisory to clients with a view to improving their processes thereby saving costs.</p> <p> I have leadership experience having led 4 team audit staff on several audit engagements, led 4 team staff at Westgate Lifecare and currently have 3 team staff under my purview. I would appreciate the opportunity to interview with Paystack for the Senior finance analyst position. Please find enclosed my resume for your review. </p> I can be reached via email at odogwujonas@gmail.com or by phone at 07032626688. <p>I enthusiastically look forward to hearing from you soon.</p> Thank you for your time and consideration.  
+<br> Sincerely, 
+<p> Odogwu, Jonas  </p>
+
+</span>
+</div>
+<button id="btn"> Read more </button>
+<button id="btn1"> Read less </button>
+
+
+<style type="text/css">
+#body{
+	background: dodgerblue;
+}
+
+
+#more{
+	display: none;
+}
+
+#info{
+	text-align: justify;
+	font-size: 20px;
+}
+
+#btn, #btn1 {
+background: green;
+cursor: pointer;
+color: gold;
+font-size: 15px;
+}
+
+
+</style>
+
+<script type="text/javascript">
+let btn = document.getElementById("btn");
+let more = document.getElementById("more");
+//let readlesstext = document.getElementsByClassName("readlesstext");
+let btn1 = document.getElementById("btn1");
+
+document.addEventListener("DOMContentLoaded", function(){
+btn1.style.display = "none";
+})
+
+btn.onclick = () => {
+btn.innerHTML = "";
+btn.style.display ="none";
+btn1.style.display = "block";
+btn1.innerHTML = "Read less"
+more.style.display = "inline";
+}
+
+btn1.onclick = () => {
+more.style.display = "none";
+btn.style.display = "block";
+btn.innerHTML = "Read more";
+btn1.style.display = "none";
+btn1.innerHTML = "";
+
+}
+
+
+
+
+
+
+
+
+//document.addEventListener("DOMContentLoaded", function(){
+//btn1.style.display = "none";
+//btn1.innerHTML="";
+
+
+
+
+
+
+//})
+/*
+btn.onclick = () => {
+more.style.display="inline";
+btn.style.display = "none";
+btn.innerHTML="";
+btn1.style.display = "block"
+btn1.innerHTML = "read less"
+return;
+}; 
+
+
+btn1.onclick = () => {
+more.style.display = "none";
+btn.style.display="block";
+btn.innerHTML="Read more";
+btn1.style.display = "none";
+btn1.innerHTML="";
+
+
+}
+*/
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

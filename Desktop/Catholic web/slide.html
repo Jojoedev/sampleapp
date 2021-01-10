@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide</title>
+</head>
+<body id="body">
+
+<div id="slide_container">
+<div class="pictures">
+<img  src="C:\Users\ODOGU\Desktop\Catholic web\image1.jpg">
+</div>
+<div class="pictures">
+<img src="C:\Users\ODOGU\Desktop\Catholic web\image2.jpg">
+</div>
+<div class="pictures">
+<img src="C:\Users\ODOGU\Desktop\Catholic web\image3.jpg">
+</div>
+<div class="pictures">
+<img src="C:\Users\ODOGU\Desktop\Catholic web\image4.jpg">
+</div>
+ </div>
+
+<div>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+
+
+
+
+
+
+<style type="text/css">
+.pictures{
+	height: 300px;
+	width: 200;
+	display: none;
+	}
+
+
+</style>
+
+
+
+
+
+
+<script type="text/javascript">
+	var body = document.getElementById("body");
+	var pictures = document.querySelectorAll(".pictures");
+	var dots = document.querySelectorAll(".dots");
+	
+var slideIndex = 0;
+
+
+const showSlides =() => {
+var i;
+for(i=0; i <=pictures; i++){
+//pictures.style.display = "none";
+}
+
+slideIndex++;
+if(slideIndex > pictures.length) { slideIndex = 1}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+ 
+
+  }
+
+pictures[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+
+setTimeout(showSlides, 3000);
+
+}
+
+showSlides();
+
+
+/*var paxy = picture.length;
+
+const disapper = () =>{
+picture[0].style.display = "none";	
+
+};
+
+const disapper1 = () =>{
+picture[1].style.display = "none";	
+
+};
+
+const disapper2 = () =>{
+picture[2].style.display = "none";	
+
+};
+
+const disapper3 = () =>{
+picture[3].style.display = "none";	
+
+};
+
+
+
+const disp = () => {
+	for(i=0; i <=3; i++){
+	
+	picture[i].style.display = "inline";
+	 	
+	setTimeout(disapper, 7000);
+	setTimeout(disapper1, 12000);
+	
+}
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+ 
+ 
+picture.forEach(function(){
+//for each of the pictures, set display time interval for 2 sec
+
+setInterval(disp, 2000)
+
+})
+
+
+
+
+ //}
+
+
+
+})
+
+
+
+
+*/
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debra</title>
+</head>
+<body id="body">
+<h1 id="text1"> Jojoe Group </h1>
+
+<nav id="nav_container">
+<li class="nav_items"> <a href="#"> HOME </a> </li>
+<li class="nav_items"> <a href="#"> ALL WOMEN </a> </li>
+<li class="nav_items"> <a href="#"> WORK WEAR </a> </li>
+<li class="nav_items"> <a href="#"> GOING OUT </a> </li>
+<li class="nav_items"> <a href="#"> BUSINESS CASUAL</a> </li>
+<li class="nav_items"> <a href="#"> CASUAL</a> </li>
+<li class="nav_items"> <a href="#"> SHOE/BAGS/ACCESSORIES</a> </li>
+<li class="nav_items"> <a href="#"> CLEARANCE SALES</a> </li>
+<li class="nav_items"> <a href="#"> LUXURY</a> </li>
+<li class="nav_items"> <a href="#"> INFO </a> </li>
+<br>
+<li class="nav_items"> <img src="C:\Users\odogwu.jonas\Desktop\javascript\Sublime Text 3\Projects\hori.jpg"><a class="inst" href="#"> Instagram </a> </li>
+
+</nav>
+
+<ul id="slides">
+    <li class="slide showing"> <img class="img1"  src="C:\Users\ODOGU\Documents\Bluetooth Folder\Nkem's Pix.jpg" alt="error">  </li>
+    <li class="slide"> <img class="img1" src="C:\Users\ODOGU\Desktop\Catholic web\image2.jpg" alt="error">    </li>
+    <li class="slide"><img class="img1" src="C:\Users\ODOGU\Documents\Bluetooth Folder\Nkem's Pix.jpg" alt="error"> </li>   
+    <li class="slide"><img class="img1" src="C:\Users\ODOGU\Desktop\Catholic web\image4.jpg" alt="error"> </li>
+
+</ul>
+
+
+<div id="slide_container">
+
+    <img  class="mySlides" src="C:\Users\ODOGU\Desktop\Catholic web\image1.jpg">
+    <img  class="mySlides"src="C:\Users\ODOGU\Desktop\Catholic web\image2.jpg"> 
+    <img  class="mySlides"src="C:\Users\ODOGU\Desktop\Catholic web\image3.jpg"> 
+    <img  class="mySlides"src="C:\Users\ODOGU\Desktop\Catholic web\image4.jpg"> 
+
+<button onclick="plusDivs(-1)"> << </button>
+<button onclick="plusDivs(1)"> >> </button>
+</div>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+#text1{
+    list-style: none;
+    text-align: center;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+
+#nav_container{
+    height: 450px;
+}
+
+li:hover{
+    cursor: pointer;
+}
+.inst{
+    cursor: pointer;
+}
+
+
+
+.nav_items {
+list-style: none;
+line-height: 5px;
+padding: 20px;
+font-size: 20px;
+color: black;
+font-family: Trebuchet MS, sans-serif;
+font-weight: 100;
+font-variant: normal;
+
+
+
+}
+
+/*Essetial properties */
+#slides{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    height: 100%
+    width: 50%;
+
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+.img1{
+    width: 100%;
+    height: 450px;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    padding-left: 300px;
+    margin-top: -470px;
+
+    
+    
+}
+
+.slide:nth-of-type(1){
+    /*background: red;*/
+}
+.slide:nth-of-type(2){
+   /*background: orange;*/
+}
+.slide:nth-of-type(3){
+    /*background: green;*/
+}
+.slide:nth-of-type(4){
+   /* background: blue;*/
+}
+.slide:nth-of-type(5){
+    /*background: purple;*/
+}
+
+#body {
+background: linen;
+}
+
+
+#layout{
+    width: 100%;
+    height: 300px;
+
+    
+}
+
+#slide_container{
+    padding-left: 50%;
+    margin: 30px;
+}
+
+.slides{
+    height: 500px;
+    width: 300px;
+    position: static;
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+
+
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,3000);
+
+function nextSlide(){
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+    
+}
+
+
+
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+showDivs(slideIndex += n);
+}
+
+/*
+function showDivs(n) {
+var i;
+var x = document.getElementsByClassName("mySlides");
+console.log(x);
+if(n > x.length) {slideIndex = 1}
+if(n < 1) {slideIndex = x.length}
+for(i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+}
+
+x[slideIndex-1].style.display = "block";
+
+}
+*/   
+function showDivs(n) {
+var i;
+var x = document.getElementsByClassName("mySlides");
+console.log(x);
+if(n > x.length) {slideIndex = 1}
+if(n < 1) {slideIndex = x.length}
+for(i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+}
+
+x[slideIndex-1].style.display = "block"; 
+
+
+
+}
+    
+setTimeout(showDivs(), 1000)
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

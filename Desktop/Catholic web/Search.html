@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search</title>
+</head>
+<body>
+<input id="sth"type="Search" placeholder="Search something">
+<button id="btn"> Click to search </button>
+
+
+<script type="text/javascript">
+let sth = document.getElementById("sth");
+let btn = document.getElementById("btn");
+
+btn.onclick = () => {
+console.log(event.target);
+console.log(sth.value);
+/*if(sth.value === body.value){
+	alert("Yeah")
+} else { alert("nah")}*/
+
+}
+
+
+</script>
+
+</body>
+</html>

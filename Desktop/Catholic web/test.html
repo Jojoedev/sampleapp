@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1> Website </h1>	
+<div id="layout">
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix1.jpg">1</li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix2.jpg">2</li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix3.jpg">3</li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix4.jpg">4</li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix5.jpg">5</li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix6.jpg" height="500px">6</li>
+
+</div>
+
+
+<button class="btn-0-panel active" id="btn-0"> Backward  </button>
+<button class="btn-1-panel" id="btn-1" value = "count"> Forward </button>
+
+<style type="text/css">
+.showImages{
+	display: none;
+	padding: 0px;
+	margin-left: 0;
+	
+}
+</style>
+
+
+<script type="text/javascript">
+
+
+var backward = document.getElementById("btn-0");
+var forward = document.getElementById("btn-1");
+var showImages = document.querySelectorAll(".showImages");
+var slideBack = 1;
+var displayNext = 3;
+var displayNextty = 5;
+
+var slideForward = -1;
+var slideBackward = 1;
+var activeButton = 0;
+
+document.addEventListener("DOMContentLoaded", function(){
+
+for(i =0; i < showImages.length; i++) {
+
+showImages[0].style.display = "inline";
+showImages[1].style.display = "inline";
+showImages[2].style.display = "inline";	
+
+}
+
+})
+var clickCount = 0;
+
+
+
+
+
+
+
+forward.onclick = (count) => {
+//remove index 0 and add index 3. next index + 1, showImages.length -3;
+	//slideBack =1;
+	//displayNext =3;
+	//displayNextty = 5;
+	backward.disabled = true;
+clickCount++;
+console.log(clickCount);
+
+//if(clickCount === 3) {
+//forward.disabled = true;
+//}
+
+	slideBack++;
+	displayNext ++;
+	displayNextty ++;
+	
+console.log(showImages[displayNext-1]);
+//&& showImages[3]
+if(clickCount === 1) {
+	showImages[slideBack-2].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	
+	showImages[displayNext-2].style.display = "inline";
+	//console.log(showImages[slideBack-2]);
+	console.log(showImages[displayNext-1]);
+	}
+
+	if(clickCount === 2) {
+	showImages[slideBack-2].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	
+}
+
+if(clickCount === 3) {
+	showImages[slideBack-2].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	console.log(showImages[displayNext]);
+}
+
+	};	
+
+
+//Leave below codes
+//if(showImages[displayNext-1].innerText === "6" || clickCount ===3)  
+//	forward.diabled = true;
+
+
+
+
+
+
+backward.onclick = () => {
+//remove index 0 and add index 3. next index + 1, showImages.length -3;
+	clickCount++;
+
+	forward.disabled = true;
+	slideBackward--;
+	displayNext++;
+	displayNextty --;
+
+	if(clickCount ===1) {
+	console.log(showImages[displayNext-1]);
+	showImages[slideBack-1].style.display = "none";
+	showImages[displayNext].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	//showImages[displayNext+2].style.display = "inline";	
+	}
+	if(clickCount ===2) {
+	showImages[slideBack].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	//showImages[displayNext+2].style.display = "inline";
+	//showImages[displayNext-1].style.display = "inline";	
+	}
+	
+	if(clickCount ===3) {
+	showImages[slideBack +1].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+		
+	}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*if(clickCount === 1) {
+		showImages[slideBack-2].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	
+	showImages[displayNext-2].style.display = "inline";
+	//console.log(showImages[slideBack-2]);
+	console.log(showImages[displayNext-1]);
+	}
+
+	if(clickCount === 2) {
+	showImages[slideBack-2].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	//showImages[displayNext-3].style.display = "inline";
+	//showImages[displayNext-2].style.display = "inline";
+	//console.log(showImages[slideBack-2]);
+	console.log(showImages[displayNext]);
+}
+
+if(clickCount === 3) {
+	showImages[slideBack-2].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	//showImages[displayNext-3].style.display = "inline";
+	//showImages[displayNext-2].style.display = "inline";
+	//console.log(showImages[slideBack-2]);
+	console.log(showImages[displayNext]);
+}
+
+
+
+	//showImages[slideBack-2].style.display = "none";
+	//showImages[displayNext-1].style.display = "inline";
+	
+	//showImages[displayNext-2].style.display = "inline";
+	//console.log(showImages[slideBack-2]);
+	//console.log(showImages[displayNext-1]);
+	};	
+
+
+//Leave below codes
+//if(showImages[displayNext-1].innerText === "6" || clickCount ===3)  
+//	forward.diabled = true;
+
+
+
+
+function backwardy() {
+
+backward.onclick = () => {
+//remove index 0 and add index 3. next index + 1, showImages.length -3;
+	clickCount++;
+
+	slideBackward--;
+	displayNext++;
+	displayNextty --;
+
+	if(clickCount ===1) {
+	showImages[slideBack-1].style.display = "none";
+	showImages[displayNext].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	//showImages[displayNext+2].style.display = "inline";	
+	}
+	if(clickCount ===2) {
+	showImages[slideBack].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	//showImages[displayNext+2].style.display = "inline";
+	//showImages[displayNext-1].style.display = "inline";	
+	}
+	
+	if(clickCount ===3) {
+	showImages[slideBack +1].style.display = "none";
+	showImages[displayNext-1].style.display = "inline";
+	//showImages[displayNext+2].style.display = "inline";
+	//showImages[displayNext-1].style.display = "inline";	
+	}
+
+
+
+	
+	//showImages[slideBack-1].style.display = "none";
+	//showImages[displayNext-1].style.display = "inline";
+	//showImages[displayNext-2].style.display = "inline";
+	console.log(showImages[displayNext-1]);
+
+	}
+}
+setInterval(backwardy, 2000);
+		
+*/
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,48 @@
+<html>
+<input id="input" type="number" placeholder="Enter your age">
+<button id="button"> Submit </button>
+
+
+
+
+
+
+<script>
+var input = document.getElementById("input");
+var button = document.getElementById("button");
+
+button.addEventListener("click", function() {
+console.log("Clicks");
+if(input.value < 17 && input.value > 0 )
+
+console.log("This is an underage") 
+else {
+console.log("This is an adult")
+	} input.value = "";
+
+	});
+
+/*
+
+
+var age = 34;
+
+switch(age) {
+	case 20:
+	alert("This is under age");
+	break;
+	case 30:
+	alert("This is man");
+	break;
+	case 34:
+	alert("This is a grown man");
+	default:
+	alert("This is a human being");
+
+}
+
+*/
+
+</script>
+
+</html>

@@ -1,0 +1,168 @@
+body{
+	/*background-image:url(dev.jpg);
+	/*background-image: url(VM.jpg);*/
+	/*background-size: cover;   40 30 70*/
+	background-color: rgb(40, 30, 70);
+	border: 15px;
+	margin: 6px;
+	padding: 5px;
+
+}
+
+#image {
+		position: absolute;
+		border: 20px;
+		padding: 30px;
+
+}
+
+h1 {
+color: gold;
+font-size:35px;
+text-align: center;
+
+}
+
+.lakowe {
+color: red;
+font-size:30px;
+text-align: center;
+/*background: gold;*/
+
+
+}
+
+.outstation{
+	color: red;
+	font-size:30px;
+	/*border-bottom: 2px solid;
+	width:12%;*/
+	text-align: center;
+	/*margin-left: 600px;*/
+	cursor: pointer;
+
+}
+
+#enquiry2 {
+	color:white;
+	font-size: 20px;
+	font-family: trebuchet;
+	text-align: left;
+
+	
+
+}
+
+
+
+p{
+	color:pink;
+	font-size: 20px;
+	text-align: center;
+
+}
+
+
+ul {background-color:none;
+ 	font-family: trebuchet ms;
+ 	font-size: 110%;
+ 	color:green;
+	list-style: none;}
+
+ul li { 
+		float: left;
+		width: 180px;
+		height: 25px;
+		line-height: 22px;
+		background: none;
+		border-spacing: -2px;
+		border-color: none;
+
+		
+
+		 
+}
+
+ul li a {
+
+		text-decoration: none;
+		color:white;
+		display:block;
+		background:none;
+		 
+		}
+
+
+
+ul li a:hover{
+		background-color:rgb( 40 30 70);
+		color:pink
+		}
+
+ul li ul li{ 
+			display: none; 
+
+			}
+
+ul li:hover ul li {
+			display: block;
+			margin-left: -40px;
+			}
+
+
+div, form{
+			color:tomato;
+			text-align:left;
+			margin-left: 35px;
+
+
+}
+
+
+textarea{
+
+	background-color: none;
+}
+
+.parishioner{
+	text-align: left;
+	color: gold;
+	font-family: trebuchet;
+}
+
+.enquiry {
+	text-align: left;
+	color: red;
+	margin-left: -1180px;
+	
+}
+
+.container{
+		display:flex;
+		flex-wrap: wrap;
+		transition: all;
+		cursor: pointer;
+
+
+}
+
+img{ transition: all 1s;
+
+}
+img:hover{
+
+	transform:scale(1.1);
+}
+
+
+img{padding:5px;
+ 
+}
+	
+
+.form1 {
+	margin-left: 40px;
+	/*color: rgb(100 0 0);*/
+	color: orange;
+
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anniv</title>
+</head>
+
+<hr id="hr">
+
+<body id="body">
+<svg style="width:10%; height: 80px">
+	<circle cx ="20" cy="10" r="10" style="fill:red" /> 
+</svg>
+
+<div id="mov"> <em> CONGRATULATIONS!!!! </em> </div>
+<div id="mov2"> <em> God bless us! </em> </div>
+<h1 id="msg"> </h1>
+<h2 id="msg1"> </h2>
+<h2 id="msg3"> </h2>
+
+<h2 id="msg2"> </h2>
+<hr id="hr2">
+
+<button id="btn"> click me</button> 
+<svg id="dot"style="width:10%; height: 80px">
+	<circle cx ="20" cy="10" r="10" style="fill:blue" />
+</svg>
+
+
+<style type="text/css">
+	#body{
+		background-color: rgb( 60, 40, 70);
+		/*background: linear-gradient( orange, lightpink, purple, blue);
+		background-color: #001F3F;*/
+		border: linen solid 5px;
+		border-radius: 10px;
+		align-content: center;
+	}
+
+#dot{
+	align-content: right;
+}
+@keyframes grow {
+	from { 
+		font-size: 10px;
+	}
+
+	to {
+		font-size: 80px;
+	}
+}
+
+#mov {
+	/*position: relative;*/
+	animation-name: grow;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+	color: gold;
+	text-align: center;
+	font: bold 50px Sans-serif;
+
+	
+}
+
+
+@keyframes move {
+0% { 
+		left: 0%;
+	}
+
+	50% {
+		left:  60%;
+	}
+
+100% {left: 0%;}
+}
+
+#mov2 {
+	position: relative;
+	animation-name: move;
+	animation-duration: 9s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	color: gold;
+	font-size: 30px;
+	
+}
+
+
+	#hr, #hr2 {
+		background: gold;
+	}
+#msg{
+	color: gold;
+	font-size: 30px;
+	text-align: center;
+	font: bold 60px Sans-serif;
+	font-weight: bolder;
+}
+
+#msg1, #msg2{
+	color: green;
+	font-size: 25px;
+	text-align: center;
+	font: bold 40px Sans-serif;
+}
+
+#msg3{
+	color :dodgerblue;
+	text-align: center;
+	font-size: 20px;
+	text-shadow: 1px 1px 1px #000;
+	font: bold 30px Sans-serif;
+}
+
+#msg1, #msg2{
+background: #0e8dbc;
+color: white;
+text-shadow: 0 1px 0 #ccc,
+			 0 2px 0 #c9c9c9,
+			 0 3px 0 #bbb,
+			 0 4px 0 #b9b9b9,
+			 0 5px 0 #aaa,
+			 0 6px 1px rgba(0,0,0,.1),
+			 0 0 5px rgba(0,0,0,.1),
+			 0 1px 3px rgba(0,0,0,.3),
+			 0 3px 5px rgba(0,0,0,.2),
+			 0 5px 10px rgba(0,0,0,.25),
+			 0 10px 10px rgba(0,0,0,.2),
+			 0 20px 20px rgba(0,0,0, .15);
+			}
+
+
+
+}
+
+
+</style>
+
+
+
+
+<script type="text/javascript">
+let msg = document.getElementById("msg");
+let msg1 = document.getElementById("msg1");
+let msg2 = document.getElementById("msg2");
+let msg3 = document.getElementById("msg3");
+let btn = document.getElementById("btn");
+let mov2 = document.getElementById("mov2");
+
+
+document.addEventListener("DOMContentLoaded", function() {
+let date = new Date();
+let hours = date.getHours();
+let month = date.getMonth();
+let today = date.getDate();
+
+if (today === 21) {
+msg.innerHTML = "<em>Happy Love Anniversary to us!!!!!</em>";
+msg1.innerHTML = "Jojoe & Aby";
+
+setTimeout(function(){
+msg2.innerHTML = "<em> Thank God for the journey so far.</em>";
+msg.style.color ="pink";
+msg1.style.color ="gold";
+
+msg1.innerHTML = "<em> I love you Nkem!!</em>"
+
+}, 1500)
+
+setTimeout(function(){
+	msg3.innerHTML = "<em> Thank you for coming into my life. <br> I couldn\'t have asked for a better wife!!, You\'re My Princess!!! </em>"
+	body.style.background ="#001F3F";
+
+}, 3000)
+
+} else {
+	msg.innerHTML = "Happy Love Anniversary to us in advance!!!";
+	msg1.innerHTML = "I love you Nkem!!"
+}
+
+mov2.style.animationPlayState = "paused"
+
+
+btn.onclick = () => { 
+if(mov2.style.animationPlayState === "paused") {
+mov2.style.animationPlayState = "running"
+} else {mov2.style.animationPlayState = "paused"}
+}
+
+
+
+
+});
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

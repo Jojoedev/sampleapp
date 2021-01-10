@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>profile</title>
+<h5 id="home"> </h5>
+</head>
+<link rel="stylesheet" type="text/css" href="profile.css">
+<body id="body">
+	<hr>
+<h1 id="h1"> Welcome to my page!!! </h1>
+<h1 id="greeting"> </h1>
+<h2 id="h2">Hello, My name is Jonas!! </h2>
+<h3 id="profile"> I am a software developer and chartered accountant.<h3>
+<h3 id="profile2">  </h3>
+<h3 id="profile3"> </h3>
+<button id="btn"> Read more!! </button>
+<br> <br>
+<nav id="nav">
+	<li> <a href="#">Home</a> </li>
+	<li> <a href="#images">Projects</a> </li>
+		
+	<li> <a href="#footer">Contact</a> </li>
+</nav>
+<br> <br>
+<div id=image>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\Catholic web\Calculator.jpg">
+<p> This is Virgin Mary </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\MO.jpg">
+<p> This is Virgin Mary </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\MO.jpg">
+<p> This is Virgin Mary </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\MO.jpg">
+<p> This is Virgin Mary </p>
+</div>
+
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\MO.jpg">
+<p> This is Virgin Mary </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\MO.jpg">
+<p> This is Virgin Mary </p>
+</div>
+<div>
+<img id="images" src="C:\Users\ODOGU\Desktop\MO.jpg">
+<p> This is Virgin Mary </p>
+</div>
+</div>
+
+<style>
+body{
+background: rgb(60, 40, 80);
+padding: 30px;
+margin: 30px;
+border: 40px;
+
+}
+
+p{
+	color: white;
+	text-align: center;
+	font-size: 20px;
+}
+
+#nav{
+display: flex;
+color: red;
+background: yellow;
+padding: 8px;
+border: green solid 5px;
+border-radius: 10px;
+
+}
+
+li,a {
+	padding-left: 10px;
+	text-decoration: none;
+	list-style: none;
+	font-size: 20px;
+	color:red;
+}
+
+
+ .contact {
+	margin-left: auto;
+}
+
+#btn {
+	color: red;
+	font-size: 20px;
+}
+
+#image {
+display: inline-grid;
+transition: all;
+cursor: pointer;
+align-items: center;
+
+}
+/*
+#image{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+	}
+*/
+
+#images{
+	grid-gap: 20px;
+	grid-column: 2;
+}
+
+img {
+	transition: all 1s;
+}
+
+img:hover{
+
+	transform:scale(1.1);
+}
+
+#footer {
+	color: black;
+	font-size: 20px;
+	text-align: left;
+	line-height: 10px;
+	background: dodgerblue;
+	padding: 10px;
+	border: green solid 5px;
+	border-radius: 10px;
+
+
+
+}
+
+#homy{color: white;
+	font-size: 20px;
+	text-align: left;
+	line-height: 20px;
+	margin: 0;
+
+	
+}
+
+
+#h1{
+	color: skyblue;
+	border: green;
+	font-size: 25px;
+}
+
+#profile{
+	color: gold;
+	font-size: 25px;
+}
+
+#profile2, #profile3, #greetings {
+	
+	font-size: 25px;
+}
+
+
+h2{
+	color: green;
+	font-size: 25px;
+}
+
+
+
+</style>
+
+<script>
+let body = document.getElementById("body");
+let h1 = document.getElementById("h1");
+let greeting = document.getElementById("greeting");
+let h2 = document.getElementById("h2");
+let profile2 = document.getElementById("profile2");
+let profile = document.getElementById("profile");
+let btn = document.getElementById("btn");
+let profile3 = document.getElementById("profile3");
+let projects = document.getElementById("projects");
+let list = document.getElementById("listItem");
+let image = document.getElementById("image");
+let contact = document.getElementById("contact");
+let footer = document.getElementById("footer");
+
+
+
+//projects.addEventListener("click", function(){
+//image.style.display="inline-flex";
+//image.style.display="grid";
+// image.style.width="100%";
+// image.style.height="100%";
+// image.style.border="20px";
+
+// });
+
+
+
+btn.addEventListener("click", function(){
+
+
+setTimeout(function(){
+body.style.background="linear-gradient(to right, blue, black)";
+
+profile3.innerHTML="expertise in financial management and corporate reporting.";
+profile3.style.color="gold";
+h2.style.color="white";
+btn.style.display="none";
+
+}, 3000)
+
+setTimeout(function(){
+profile2.innerHTML = "ability to build responsive webs and apps using JavaScript, ReactJs and Python.<br>I will be a good hire for your team.";
+	profile2.style.color="cyan";
+
+}, 2000)
+
+
+setTimeout(function(){
+profile.style.color="linen";
+h2.style.color="gold";
+}, 7000);
+
+})
+
+//var today = new Date()
+//hour = today.getHours();
+//min = today.getMinutes();
+//sec = today.getSeconds();
+//timeNow =(`${hour}:${min}:${sec}`);
+
+var today = new Date()
+hour = today.getHours();
+let timeOfDay
+if(hour >= 12 && hour <= 17){
+	timeOfDay = "afternoon";
+ }
+ else if (hour >= 17) {
+ 	timeOfDay = "evening";
+ }
+
+ else if(hour >= 0 && hour < 12) {
+ 	timeOfDay = "morning";
+}
+
+greeting.innerHTML=`Good ${timeOfDay}!`
+
+setTimeout(function(){
+greeting.style.color="green"
+}, 8000)
+
+
+
+ </script>
+ 
+ <footer id="footer">Location: Lagos, Nigeria;
+ 					 Email: Jojoe_dev@gmail.com; 
+ 					 Twitter: @Jojoe_dev.
+ 					 
+ 				</footer>
+ 	
+ 	<li> <a id="homy" href="#home"> Home</a> </li>				
+<hr>
+</body>
+</html>

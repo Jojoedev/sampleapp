@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To do list</title>
+</head>
+<div id="info"> To Do List </div> <br>
+<body>
+<div id="greetings"> </div> <br>
+<input id="date"type="date" name="">
+<div id="MyList">
+<ul id="items">
+	<li class="listItems"> </li>
+	<!--<li class="listItems"> Read Bible</li>
+	<li class="listItems"> Study for exams</li> -->
+</ul>
+
+</div>
+<div id="wrap">
+<input id="input" type="text" name="" placeholder="Write something here"> <input id="timer" type="time" name="">
+</div>
+
+<button id="btn">Add to list</button><button id="btn1"> Delete </button> 
+
+<style type="text/css">
+	body{background: rgb(30 20 40);
+		margin: 20px;
+		border: 20px;
+		padding: 20px;
+	}
+	#wrap{
+		display: inline;
+	}
+
+
+	#date{
+		color: red;
+		font-size: 20px;
+		background: pink;
+
+	}
+
+	#greetings{
+		font-size: 30px;
+		color: gold;
+		font-weight: 30px;
+
+	}
+
+#input{
+	background: white;
+	font-size: 20px;
+}
+
+	 #info{
+		font-size: 30px;
+		color: teal;
+
+
+	}
+	#btn1, #btn {
+		position: relative;
+		color:gold;
+		background: teal;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	#btn1{
+		margin-left: 255px;
+		margin-top: 20px;
+		
+	}
+
+li{
+	color: red;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+#footer{
+	position: fixed;
+	bottom: 0;
+	width: 95%;
+	color: gold;
+	font-size: 20px;
+	background: teal;
+	line-height: 30px;
+	border: teal 5px solid;
+	border-radius: 5px;
+
+}
+
+
+
+</style>
+
+
+
+
+<script type="text/javascript">
+let listItems = document.querySelector("listItems");	
+let MyList = document.getElementById("MyList");
+let btn = document.getElementById("btn");
+let input = document.getElementById("input");
+let btn1 = document.getElementById("btn1");
+let items = document.querySelector("#items")
+let first = document.getElementById("first")
+let greetings = document.getElementById("greetings")
+let timer = document.getElementById("timer");
+//let btn2 = document.getElementById("btn2");
+/*
+btn2.onclick = () => {
+	alert(timer.value)
+	
+
+}
+*/
+
+var today = new Date()
+hour = today.getHours();
+min = today.getMinutes();
+sec = today.getSeconds();
+timeNow =(`${hour}:${min}`);
+
+
+
+/*
+var today = new Date()
+hour = today.getHours();
+min = today.getMinutes();
+sec = today.getSeconds();
+timeNow =(`${hour}:${min}`);
+*/
+//timeNow =(`${hour}:${min}:${sec}`);
+checkTime = () => {
+if(timer.value === timeNow){
+	alert("Yeah")} 
+}
+
+checkTime();
+
+
+document.addEventListener("DOMContentLoaded", function(){
+	btn1.style.display = "none";
+	items.innerHTML = "";
+	
+});
+
+const addListItems = () => {
+if(input.value.length !== 0){
+	
+	let element = document.createElement("li");
+	let node = document.createTextNode(input.value);
+	
+	element.appendChild(node);
+	items.appendChild(element);
+	input.value="";
+	btn1.style.display = "none";
+	
+	let elementTimer = document.createElement("li");
+	let timerNode = document.createTextNode(timer.value);
+	elementTimer.appendChild(timerNode);
+	items.appendChild(elementTimer);
+}
+else {alert("add input")}
+
+};
+
+input.addEventListener("keypress", function(event){
+if(event.keyCode === 13) {
+	addListItems();
+}
+});
+
+
+btn.onclick = () => {
+addListItems();
+}
+
+
+//Funtion to delete list items
+items.onclick = (mousedown) =>{
+	btn1.style.display = "block";
+
+	//btn1.onclick = () =>{
+		//for (var i = 0; i <= items.children.length -1; i++) {
+			 	
+			//console.log(items.children.length[i]) console.log(items.children[i]);console.log(i);
+			console.log(event.target);
+			let peace = event.target;
+			peace.style.color ="white";
+
+			console.log(peace, "a");
+			setTimeout(function(){
+			peace.style.color ="red";
+			btn1.style.display = "none";
+			btn2.innerHTML = "";
+			}, 5000);
+
+
+
+			btn1.onclick = () => {
+			//peace.style.background ="green";
+			//peace.style.color ="red";
+			peace.style.display = "none"; //this deletes the line
+			//peace.style.textDecorationLine = "line-through"; //this strike through the line
+			//peace.style.textDecorationColor = "white";
+			
+
+			console.log(peace, "b");	
+			btn1.style.display = "none";
+			}			
+			
+	
+	}
+
+	
+const date = new Date();
+const hours = date.getHours();
+let timeOfDay;
+
+if(hours >= 0 && hours < 12){
+	timeOfDay = "Morning";
+	
+}
+
+if(hours >= 12 && hours < 17){
+	timeOfDay = "Afternoon";
+	
+}
+else if (hours >= 17 && hours < 24) {
+ 	timeOfDay = "Evening";
+ 	console.log(timeOfDay);
+ }
+console.log(`Good ${timeOfDay}`);
+
+greetings.innerHTML = `Good ${timeOfDay}!!!`;
+
+
+
+</script>
+
+<footer id="footer"> Lagos, Nigeria; Email: Jojoe.dev1@gmail.com; Twitter: @Jojoe_dev</footer>
+
+
+</body>
+</html>

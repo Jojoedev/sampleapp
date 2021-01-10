@@ -1,0 +1,129 @@
+﻿<HTML>
+
+<title> Play Solo!! </title> 
+<body id = "body">
+<h3 id ="int"> This is a solo game built to reduce boredom </h3>
+
+<button id = "long"> Player 1 </button> <button id = "belly"> New game </button>
+<!--<button id = "butty"> Player 2 </button>-->
+
+<br> <br> <br>
+
+
+<div id="currentScore"> </div>
+
+<br> <br> <br>
+<div id="currentScore1" placeholder="Player1"> </div>
+<!--
+<input id ="input">
+<button id = "submit"> Submit </button>
+-->
+<br> <br> <br>
+<div id = "totalScore"> </div>
+<br> <br> <br>
+<div id = "totalScore1"></div>
+
+<br> <br> <br>
+<div id = "globalScore"> </div>
+<br> <br> <br>
+<div id = "globalScore1"> </div>
+<br> <br> <br>
+<div id = "scoreBoard"> </div>
+<script>
+
+let input = document.getElementById("input");
+//var button = document.getElementById("submit");
+var button = document.getElementById("belly");
+var button = document.getElementById("butty");
+var button = document.getElementById("long");
+
+var h3 =document.getElementById("int");
+var body =document.getElementById("body");
+int.style.color = "green";
+body.style.background = "skyblue";
+body.style.border = "90px";
+body.style.margin = "90px";
+body.style.padding = "100px";
+currentScore.style.background ="gold";
+currentScore1.style.background = "white";
+totalScore.style.background = "linen";
+totalScore1.style.background = "yellow";
+globalScore.style.background = "cyan";
+globalScore1.style.background = "pink";
+scoreBoard.style.background = "white";
+
+button.style.color="red";
+belly.style.color="red";
+
+var scoreJohn =  ((Math.floor(Math.random() * 9)))
+
+var div = document.getElementById("currentScore").textContent="0";
+var div = document.getElementById("currentScore1").textContent="0";
+var div = document.getElementById("totalScore").textContent="0";
+var div = document.getElementById("totalScore1").textContent="0";
+var div = document.getElementById("globalScore").textContent="0";
+var div = document.getElementById("globalScore1").textContent="0";
+var div = document.getElementById("scoreBoard").textContent="0";
+
+
+button.addEventListener("click", function() {
+
+var scoreJohn =  (Math.floor(Math.random() * 6));
+var scoreJohn1 = (Math.floor(Math.random() * 6));
+
+if(scoreJohn >=5) {
+currentScore.textContent = scoreJohn;
+totalScore.textContent += scoreJohn;
+globalScore.textContent -=scoreJohn;
+if(totalScore.innerText.length === 20) {
+alert("It\s Half Time, Scoreline:Team A: 1 , Team B: 0")
+alert("Second half follows!!!");
+
+totalScore.innerText.length === 20 ? scoreBoard.textContent = 1: "";
+}
+}
+else
+
+if(scoreJohn1 >= 5) {
+
+currentScore1.textContent = scoreJohn1;
+totalScore1.textContent += scoreJohn1;
+globalScore1.textContent -= scoreJohn1;
+if(totalScore1.innerText.length === 20) {
+alert("It\s Half Time, Scoreline:Team A: 0 , Team B: 1")
+alert("Second half follows!!!");
+totalScore1.innerText.length === 20 ? scoreBoard.textContent = 2 : "";
+//globalScore1.innerText.valueOf() > -45 ? alert("Hurray!! Team B is the global winner!!") : "";
+//globalScore.textContent = 0;
+//globalScore1.textContent = 0;
+}
+
+}
+
+});
+
+
+belly.addEventListener("click", function() {
+
+
+totalScore.textContent = 0;
+totalScore1.textContent = 0;
+globalScore1.textContent = 0;
+globalScore.textContent = 0;
+currentScore1.textContent = 0;
+currentScore.textContent = 0;
+
+totalScore.textContent = 0;
+globalScore1.textContent = 0;
+globalScore.textContent = 0;
+currentScore1.textContent = 0;
+currentScore.textContent = 0;
+
+scoreBoard.textContent = 0;
+
+});
+
+</script>
+
+</body>
+</HTML>

@@ -1,0 +1,84 @@
+﻿<html>
+<body>
+<input id="input"  placeholder="Enter Account Number" required> <br>
+<br>
+<!--<div> Password </div>-->
+<input id="input2" type="Password" required placeholder="Password"> <br> <br>
+<button id="button">Sign in</button>
+
+
+
+
+<script>
+	const arr = [
+	{
+	acctNum: "1234567890",
+	password: "three"
+	},
+
+	{
+	acctNum: "2345678901",
+	password: "777"
+	},
+	{
+	acctNum: "3456789012",
+	password: "aby"
+	}
+          ];
+
+
+	const newsfeed = [
+	{
+	username: "Larry",
+	timeline: "God is aweson"
+	},
+
+	{
+	username: "Tim",
+	timeline: "Think ahead"
+	},
+	{
+	username: "Julius",
+	timeline: "TGIF!!"
+	}
+         ];
+	
+	let input = document.getElementById("input");
+	let button = document.getElementById("button");
+	
+	button.addEventListener("click", function() {
+	const isUserValid = (acctNum, password) => {
+	for (var i = 0; i < arr.length; i++) {
+	if(arr[i].acctNum === acctNum && arr[i].password === password)
+	return true;
+	
+	}
+	
+	return false;
+	
+	}
+	});
+	const signin = (acctNum, password) => {
+	if (isUserValid(acctNum, password)) {
+	console.log(newsfeed);
+	} 
+	else {
+	alert("Wrong input");
+	}
+	
+	
+	};
+	
+	//var usernamePrompt = prompt("What is your username");	
+	//var passwordPrompt = prompt("What is your password");
+
+	//signin(usernamePrompt, passwordPrompt);
+	
+//if(arr[i].acctNum === input.value && arr[i].password === password) {
+//console.log(profile);
+
+
+</script>
+</html>
+</body>
+

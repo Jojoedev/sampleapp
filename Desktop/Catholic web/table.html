@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+</head>
+<body id="body">
+
+<h1 id="show"> </h1> 
+<h1 id="disp"> </h1> 
+ <table id="table">
+ 	<tr> 
+ 		<td> <input class="numbers" type="button" value="1" name="one"> </td>
+ 		<td> <input class="numbers" type="button" value="2" name="two"> </td>
+ 		<td> <input class="numbers" type="button" value="3" name="three"> </td>
+ 		<td> <input class="numbers" type="button" value="4" name="four"> </td> 
+ 	</tr>
+ 	<tr>
+ 		<td> <input class="numbers" type="button" value="5" name="five"> </td>
+ 		<td> <input class="numbers" type="button" value="6" name="six"> </td>
+ 		<td> <input class="numbers" type="button" value="7" name="seven"> </td>
+ 		<td> <input class="numbers" type="button" value="8" name="eight"> </td>
+ 	</tr>
+ 	<tr>
+ 		<td> <input class="numbers" type="button" value="9" name="nine"> </td>
+ 		<td> <input class="numbers" type="button" value="0" name="zero"> </td> 
+ 		<td> <input  class="operators" type="button" value="+" name="plus"> </td>
+ 		<td> <input  class="operators" type="button" value="-" name="minus"> </td>
+ 	  	</tr>
+ 	  <tr> <td> <input  class="operators" type="button" value="*" name="multiply"> </td> 
+ 	  		<td> <input id="fuctn"  type="button" value="=" name="equal to"> </td>
+ 	  		<td> <input  class="operators" type="button" value="/" name="divide">
+ 	  		<td> <input  id="clear" type="button" value="C" name="clear">
+
+ 	  </tr>
+ 	  <tr>
+ 	  <td> <input  id="remove" type="button" value="<" name="remove"> </td>
+ 	  </tr>
+
+ </table>
+<style type="text/css">
+#table{
+	
+
+}
+
+
+#body{
+	background: rgb(30 40 60);
+	border: gold solid 5px;
+	width: 454px;
+}
+
+input{
+	padding: 22px;
+	margin: 20px;
+	border: 20px;
+	color: gold;
+	font-size: 40px;
+	background: dodgerblue;
+    cursor: pointer;
+
+}
+
+#show{
+	position: relative;
+	color: gold;
+	font-size: 40px;
+	padding-left: 50px;
+	background: teal;
+	border: red solid 2px;
+	width: 400px;
+	height: 40px;
+	
+}
+
+#disp{
+	position: relative;
+	color: red;
+	font-size: 40px;
+	padding-left: 50px;
+	background: linen;
+	border: red solid 2px;
+	width: 400px;
+	height: 40px;
+	
+}
+
+
+
+</style>
+<script type="text/javascript">
+var show = document.getElementById("show");
+var numbers = document.querySelectorAll('.numbers')
+var operators = document.querySelectorAll('.operators')
+var input = document.getElementsByTagName("input")
+var fuctn = document.getElementById("fuctn");
+var clear = document.getElementById("clear");
+var disp = document.getElementById("disp");
+var remove = document.getElementById("remove");
+//for(var i =0; i <= numbers.length -1; i++){
+//console.log(numbers[i].value);
+//var arry = numbers[i].value;
+
+//undefined
+var opera, aby;
+
+
+
+//remove button
+remove.onclick = () => {
+show.textContent = show.textContent.substring(0, show.textContent.length -1);
+
+}
+
+
+
+//clear button
+clear.onclick =() =>{
+show.textContent = "";
+disp.textContent = "";
+} 
+//function to display numbers on the UI
+numbers.forEach(function(button) {
+	button.onclick = function(){
+	console.log(event.target.value);
+	//let
+	aby = event.target.value;
+	show.textContent +=aby;
+	}
+	
+})
+
+//applying operators
+operators.forEach(function(button){
+button.onclick = function(){
+console.log(event.target.value);
+opera = event.target.value;
+show.textContent +=opera;
+
+}
+})
+ 
+//Performing calaculation
+fuctn.onclick = () => {
+disp.textContent = eval(show.textContent);
+} 
+
+</script>
+
+
+
+</body>
+</html>

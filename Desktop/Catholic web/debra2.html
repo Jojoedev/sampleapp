@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Debra</title>
+</head>
+<body id="body">
+<div id="ppage"></a>
+<li id="text1"><img src="C:\Users\ODOGU\Desktop\Catholic web\debralogo.jpg"> </li>
+
+<nav id="nav_container">
+<li class="nav_items"> <a href="#"> HOME </a> </li>
+<li class="nav_items"> <a href="#"> ALL WOMEN </a> </li>
+<li class="nav_items"> <a href="#"> WORK WEAR </a> </li>
+<li class="nav_items"> <a href="#"> GOING OUT </a> </li>
+<li class="nav_items"> <a href="#"> BUSINESS CASUAL</a> </li>
+<li class="nav_items"> <a href="#"> CASUAL</a> </li>
+<li class="nav_items"> <a href="#"> SHOE/BAGS/ACCESSORIES</a> </li>
+<li class="nav_items"> <a href="#"> CLEARANCE SALES</a> </li>
+<li class="nav_items"> <a href="#"> LUXURY</a> </li>
+<li class="nav_items"> <a href="#"> INFO </a> </li>
+<br>
+<li class="nav_items"> <a class="inst" href="#"> Instagram </a> </li>
+
+</nav>
+
+<ul id="slides">
+	<li class="slide showing"> <img class="img1"  src="C:\Users\ODOGU\Desktop\Catholic web\debraslide.jpg" alt="error">  </li>
+	<li class="slide"> <img class="img1" src="C:\Users\ODOGU\Desktop\Catholic web\debraslide2.jpg" alt="error"></li>
+	
+
+</ul>
+
+<div id="imageContainer">
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix1.jpg">1 <br id="names"> WORK WEAR <br> </li>  
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix2.jpg">2 <br id="names"> CASUAL </br> </li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix3.jpg">3 <br id="names"> BUSINESS CASUAL <br></li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix4.jpg">4 <br id="names">BARGAIN BASEMENT <br> </li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix5.jpg">5 <br id="names"> GOING OUT <br> </li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\pix6.jpg" height="500px" width="330px">6 <br id="names"> SHOP ALL <br> </li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\image7.jpg" height="500px" width="330px">7 <br id="names"> SHOES <br> </li>
+<li class="showImages"> <img  src="C:\Users\ODOGU\Desktop\Catholic web\image8.jpg" height="500px" width="330px">8 <br id="names"> BAGS <br></li>
+
+</div>
+
+
+<button id="backward"> <<  </button>
+<button id="forward" value = "count"> >> </button>
+
+<!--
+<div id="layout">
+<li class="flow_items"> <img src="C:\Users\ODOGU\Desktop\Catholic web\pix1.jpg"></li>
+<li class="flow_items"> <img src="C:\Users\ODOGU\Desktop\Catholic web\pix2.jpg"></li>
+<li class="flow_items"> <img src="C:\Users\ODOGU\Desktop\Catholic web\pix3.jpg"></li>
+<li class="flow_items"> <img src="C:\Users\ODOGU\Desktop\Catholic web\pix4.jpg"></li>
+<li class="flow_items"> <img src="C:\Users\ODOGU\Desktop\Catholic web\pix5.jpg"></li>
+<li class="flow_items"> <img src="C:\Users\ODOGU\Desktop\Catholic web\pix6.jpg"></li>
+<button id="btn" onclick="showDivs(1)"> >> </button>
+<button id="btn2" onclick="showDivs(-1)"> <<  </button>
+</div>
+-->
+
+<div id="page_up"> <a href="#ppage"> <img src=""/>Home</a> </div>
+
+
+
+
+
+
+<style type="text/css">
+#names{
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+
+
+#forward {
+    position: relative;
+    color: red;
+    margin-left: 96.5%;
+    margin-top: -6%;
+}
+
+#backward {
+    position: relative;
+    color: red;
+    margin-left: 20%;
+    margin-top: -6%;
+
+}
+
+
+#text1{
+	list-style: none;
+	text-align: center;
+	position: relative;
+}
+
+#page_up{
+	padding-left: 95%;
+	cursor: pointer;
+    padding-top: 19%;
+
+}
+
+a{
+	text-decoration: none;
+	margin-left: 10px;
+	cursor: pointer;
+
+}
+
+
+#nav_container{
+	height: 100%;
+	
+	
+}
+
+li:hover{
+	cursor: pointer;
+}
+.inst{
+	cursor: pointer;
+}
+
+
+
+.nav_items {
+list-style: none;
+line-height: 5px;
+padding: 20px;
+font-size: 16px;
+color: black;
+/*font-family: Trebuchet MS, sans-serif;*/
+font-weight: bold;
+font-variant: normal;
+font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+
+#slides{
+    position: relative;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    height: 100%
+    width: 100%;
+
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+.img1{
+    width: 102%;
+    height: 450px;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    padding-left: 270px;
+    margin-top: -530px;
+
+    
+    
+}
+
+.slide:nth-of-type(1){
+    /*background: red;*/
+}
+.slide:nth-of-type(2){
+   /*background: orange;*/
+}
+.slide:nth-of-type(3){
+    /*background: green;*/
+}
+.slide:nth-of-type(4){
+   /* background: blue;*/
+}
+.slide:nth-of-type(5){
+    /*background: purple;*/
+}
+
+#body {
+background: linen;
+
+}
+
+
+#imageContainer{
+	width: 100%;
+	height: 300px;
+	margin-top: -150px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /*justify-content: center;*/
+    justify-content: flex-end; /* This is a very important property, moved the image contents to right of the web*/
+    font-size: 20px;
+    color: teal;
+    text-align: center;
+    font-weight: bold;
+}
+
+.showImages{
+    display: none;
+    padding: 9px;
+
+    
+    
+    
+}
+
+
+</style>
+
+
+<script type="text/javascript">
+
+let flow_items = document.querySelectorAll(".flow_items");
+let btn = document.getElementById("btn");
+let btn2 = document.getElementById("btn2");
+
+
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,3000);
+
+function nextSlide(){
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+
+
+/*
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function showDivs(n){
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+
+var i;
+var x = document.getElementsByClassName("flow_items");
+if(n > x.length) {slideIndex = 1}
+if(n < 1) {slideIndex = x.length}
+for(i = 0; i < x.length; i++){
+    x[i].style.display = "none";
+}
+x[slideIndex-1].style.display = "block";
+}
+*/
+
+var backward = document.getElementById("backward");
+var forward = document.getElementById("forward");
+var showImages = document.querySelectorAll(".showImages");
+var slideBack = 1;
+var displayNext = 3;
+var displayNextty = 5;
+
+var slideForward = -1;
+var slideBackward = 1;
+
+document.addEventListener("DOMContentLoaded", function(){
+
+for(i =0; i < showImages.length; i++) {
+
+showImages[0].style.display = "inline";
+showImages[1].style.display = "inline";
+showImages[2].style.display = "inline"; 
+
+}
+
+})
+var clickCount = 0;
+
+
+
+forward.onclick = (count) => {
+//remove index 0 and add index 3. next index + 1, showImages.length -3;
+    //slideBack =1;
+    //displayNext =3;
+    //displayNextty = 5;
+backward.disabled = true;
+
+clickCount++;
+console.log(clickCount);
+
+//if(clickCount === 3) {
+//forward.disabled = true;
+//}
+
+    slideBack++;
+    displayNext ++;
+    displayNextty ++;
+    
+    if(clickCount === 1) {
+        showImages[slideBack-2].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    
+    
+    }
+
+    if(clickCount === 2) {
+    showImages[slideBack-2].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    }
+
+if(clickCount === 3) {
+    showImages[slideBack-2].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    //showImages[displayNext-3].style.display = "inline";
+    //showImages[displayNext-2].style.display = "inline";
+    //console.log(showImages[slideBack-2]);
+    console.log(showImages[displayNext]);
+}
+
+if(clickCount === 4) {
+    showImages[slideBack-2].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    //showImages[displayNext-3].style.display = "inline";
+    //showImages[displayNext-2].style.display = "inline";
+    //console.log(showImages[slideBack-2]);
+    console.log(showImages[displayNext]);
+}
+
+if(clickCount === 5) {
+    showImages[slideBack-2].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    //showImages[displayNext-3].style.display = "inline";
+    //showImages[displayNext-2].style.display = "inline";
+    //console.log(showImages[slideBack-2]);
+    console.log(showImages[displayNext]);
+}
+    //showImages[slideBack-2].style.display = "none";
+    //showImages[displayNext-1].style.display = "inline";
+    
+    //showImages[displayNext-2].style.display = "inline";
+    //console.log(showImages[slideBack-2]);
+    //console.log(showImages[displayNext-1]);
+    };  
+
+
+//Leave below codes
+//if(showImages[displayNext-1].innerText === "6" || clickCount ===3)  
+//  forward.diabled = true;
+
+
+
+
+
+
+backward.onclick = () => {
+//remove index 0 and add index 3. next index + 1, showImages.length -3;
+   forward.disabled = true;
+    clickCount++;
+
+    slideBackward--;
+    displayNext++;
+    displayNextty --;
+
+    if(clickCount ===1) {
+    showImages[slideBack-1].style.display = "none";
+    //showImages[displayNext].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    //showImages[displayNext+2].style.display = "inline";   
+    }
+    if(clickCount ===2) {
+    showImages[slideBack].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    //showImages[displayNext+2].style.display = "inline";
+    //showImages[displayNext-1].style.display = "inline";   
+    }
+    
+    if(clickCount ===3) {
+    showImages[slideBack +1].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    //showImages[displayNext+2].style.display = "inline";
+    //showImages[displayNext-1].style.display = "inline";   
+    }
+
+if(clickCount ===4) {
+    showImages[slideBack +2].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    //showImages[displayNext+2].style.display = "inline";
+    //showImages[displayNext-1].style.display = "inline";   
+    }
+
+if(clickCount ===5) {
+    showImages[slideBack +3].style.display = "none";
+    showImages[displayNext-1].style.display = "inline";
+    //showImages[displayNext+2].style.display = "inline";
+    //showImages[displayNext-1].style.display = "inline";   
+    }
+
+
+
+    //showImages[slideBack-1].style.display = "none";
+    //showImages[displayNext-1].style.display = "inline";
+    //showImages[displayNext-2].style.display = "inline";
+    console.log(showImages[displayNext-1]);
+
+    }
+        
+
+</script>
+
+
+
+
+
+</body>
+</html>
